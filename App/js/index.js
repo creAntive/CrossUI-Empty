@@ -53,11 +53,27 @@ xui.Class('App', 'xui.Module',{
             host.xui_ui_formlayout1.append(
                 xui.create("xui.UI.Button")
                 .setHost(host,"xui_ui_button5")
+                .setName("button1")
+                .setRotate(359)
                 .setLeft("0em")
                 .setTop("0em")
                 .setWidth("5.866666666666666em")
                 .setHeight("3.7333333333333334em")
-                .setCaption("Button"),
+                .setCaption("Кнопочка")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "msg",
+                        "args" : [
+                            "{getCookies()}",
+                            "{}",
+                            100,
+                            5000
+                        ],
+                        "method" : "message"
+                    }
+                ]),
                 "A1"
             );
             
